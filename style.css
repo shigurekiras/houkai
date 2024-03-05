@@ -1,0 +1,170 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", system-ui;
+    
+}
+
+.navbar .logo {
+    color: white;
+    font-family: "DotGothic16", sans-serif;
+    
+}
+
+body {
+    background: url("./backgrounda.png");
+    background-size: cover;
+}
+
+.navbar a {
+    color: rgb(178, 174, 209);
+    text-decoration: none;
+    transition: 0.2s ease;
+    
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+}
+header .navbar {
+    
+    border-radius: 6px;
+   background: rgb(17, 7, 31);
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.navbar .menu-links {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    padding: 10px 10px 10px;
+}
+
+.navbar .logo {
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+.hero-section .content {
+    color: rgb(178, 174, 209);
+    background-color: rgb(17, 7, 31);
+    border-radius: 15px; 
+    padding: 10px 10px 10px;
+    
+
+}
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+margin-left: 30%;
+}
+
+.hero-section .content h1 {
+    font-size: 1.5rem;
+    max-width: 600px;
+}
+
+.hero-section .content button {
+    background: rgb(34, 16, 102);
+    color: rgb(173, 166, 240);
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    display: flex;
+    font-weight: 500;
+    margin-left: 35%;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+}
+
+.hero-section .content button:hover {
+    color: white;
+
+}
+
+@media  screen and (max-width: 900px) {
+    header.show-mobile-menu::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px);
+    }
+    #close-menu-btn, #menu-bttn {
+        display: block;
+    }
+    .navbar .menu-links {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        flex-direction: column;
+        width: 260px;
+        height: 100vh;
+        background: rgb(17, 7, 31);
+        padding: 70px 40px 0;
+        transition: left 0.15s ease;
+    }
+
+    header.show-mobile-menu .navbar .menu-links {
+        left: 0;
+    }
+
+    .navbar a {
+        color: rgb(178, 174, 209);
+
+    }
+    .hero-section .content {
+        text-align: center;
+    }
+
+    .hero-section .content :is(h1,p) {
+        max-width: 100%;
+    }
+    .hero-section .content h1 {
+        font-size: 1.2rem;
+        line-height: 30px;
+    }
+    .hero-section .content button {
+        padding: 9px 18px;
+        margin-left: 43px;
+    }
+
+
+}
+
+#menu-bttn {
+    color: rgb(178, 174, 209);
+    cursor: pointer;
+    padding: 0 10px 0;
+    display: block;
+}
+
+#close-menu-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: rgb(178, 174, 209);
+    cursor: pointer;
+}
+
